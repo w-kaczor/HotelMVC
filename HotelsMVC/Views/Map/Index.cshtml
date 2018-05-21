@@ -1,0 +1,63 @@
+﻿
+<form class="col-lg-8 col-lg-offset-2">
+    <div class="input-group">
+        <input id="address" type="text" class="form-control" placeholder="Find hotel on map..." />
+        <div class="input-group-btn">
+            <button id="submit" type="button" class="btn btn-default">Search</button>
+        </div>
+    </div>
+</form>
+<br />
+<br />
+<br />
+
+<div id="map" style="width:100%;height:500px;"></div>
+
+<script>
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 11,
+            center: { lat: 50.047783, lng: 19.850984 }
+        });
+
+        var geocoder = new google.maps.Geocoder();
+        document.getElementById('submit').addEventListener('click', function () {
+            geocodeAddress(geocoder, map);
+        });
+
+        $.ajax({
+            url: '/Map/AllHotels',
+            dataType: "json",
+            type: "GET",
+            success: function (markers) {
+                var infoWindow = new google.maps.InfoWindow();
+                for (var i = 0; i < markers.length; i++) {
+                    var data = markers[i];
+                    var myLatlng = new google.maps.LatLng(data.Latitude, data.Longitude);
+                    var marker = new google.maps.Marker({
+                        position: myLatlng,
+                        map: map,
+                    });
+                    (function (marker, data) {
+                        google.maps.event.addListener(marker, "click", function (e) {
+                            infoWindow.setContent(data.Name + "<br />" + data.City + "<br />" + data.Street + "<br />" + data.PostalCode + "<br />" + data.Phone);
+                            infoWindow.open(map, marker);
+                        });
+                    })(marker, data);
+                }
+            }
+        });
+    }
+
+    function geocodeAddress(geocoder, resultsMap) {
+        var address = document.getElementById('address').value;
+        geocoder.geocode({ 'address': address }, function (results, status) {
+            if (status === 'OK') {
+                resultsMap.setCenter(results[0].geometry.location);
+            }
+        });
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQSwzY2ju1J0hCW3crvhVK9BpCuwkS818&callback=initMap">
+</script>

@@ -1,0 +1,13 @@
+﻿@model PagedList.IPagedList<HotelsMVC.Models.Hotel>
+
+<div class="col-lg-3">
+    @Html.Partial("_Map")
+</div>
+
+<div class="col-lg-9">
+    @Html.Partial("SearchOptions")
+    <div id="hotelList">
+        @Html.Partial("HotelList", Model)
+    </div>
+</div>
+

@@ -1,0 +1,143 @@
+﻿@model IEnumerable<HotelsMVC.Models.Hotel>
+
+<link href="~/Content/dataTables.bootstrap.min.css" rel="stylesheet" />
+<script src="~/Scripts/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/dataTables.bootstrap.min.js"></script>
+<script src="~/Scripts/moment.min.js"></script>
+
+<h2>Admin Panel</h2>
+<hr />
+<nav class="navbar navbar-inverse">
+    <ul class="nav navbar-nav">
+        <li>@Html.ActionLink("Hangfire", null, "hangfire")</li>
+    </ul>
+</nav>
+
+@if (TempData["Verified"] != null)
+{
+        <div class="alert alert-success col-lg-12">
+            <strong>Success!</strong> Hotel has been verified. (HotelId: @TempData["Verified"].ToString())
+        </div>
+}
+@if (TempData["Hidden"] != null)
+{
+    <div class="alert alert-warning col-lg-12">
+        <strong>Success!</strong> Hotel has been hidden. (HotelId: @TempData["Hidden"].ToString())
+    </div>
+}
+@if (TempData["Deleted"] != null)
+{
+    <div class="alert alert-danger col-lg-12">
+        <strong>Success!</strong> Hotel has been deleted. (HotelId: @TempData["Deleted"].ToString())
+    </div>
+}
+@if (TempData["DateOfPromotion"] != null)
+{
+    <div class="alert alert-info col-lg-12">
+        <strong>Success!</strong> Date of promotion has been changed: @TempData["DateOfPromotion"].ToString())
+    </div>
+}
+
+<h2>Hotels to verify:</h2>
+<hr />
+<table id="hotelsToVerify" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Hotel Id</th>
+            <th>Name</th>
+            <th>Date Added</th>
+            <th>Click to verify</th>
+        </tr>
+    </thead>
+</table>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#hotelsToVerify').DataTable({
+            ajax: '/AdminPanel/HotelsToVerify',
+            columnDefs: [
+                  {
+                    targets: 3,
+                    data: "HotelId",
+                    render: function (data, type, row) {
+                        var myUrl = '@Url.Action("Details", "AdminPanel")/' + data;
+                        return '<a href=\"' + myUrl + '\" class=\"btn btn-primary\">Verify</a>';
+                    }
+                },
+                {
+                    targets: 2, render: function (data) {
+                    return moment(data).format('MMMM Do YYYY, h:mm:ss a');
+                    }
+                },
+                {
+                    targets: 3,
+                    className: "text-center"
+                }
+            ],
+            order: [[2, "desc"]],
+            columns: [
+                { data: 'HotelId' },
+                { data: 'Name' },
+                { data: 'DateAdded' },
+            ]
+        });
+    });
+</script>
+
+<h2>All hotels:</h2>
+<hr />
+<table id="allHotels" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Hotel Id</th>
+            <th>Name</th>
+            <th>Date Added</th>
+            <th>Date Promoted</th>
+            <th>City</th>
+            <th>Street</th>
+            <th>Phone</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+</table>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#allHotels').DataTable({
+            ajax: '/AdminPanel/AllHotels',
+            columnDefs: [
+                {
+                    targets: 7,
+                    data: "HotelId",
+                    render: function (data, type, row) {
+                        var myUrl = '@Url.Action("Details", "AdminPanel")/' + data;
+                        return '<a href=\"' + myUrl + '\" class=\"btn btn-primary\">Details</a>';
+                    }
+                },
+                {
+                    targets: 7,
+                    className: "text-center"
+                },
+                {
+                    targets: 2, render: function (data) {
+                        return moment(data).format('MMMM Do YYYY, h:mm:ss a');
+                    }
+                },
+                {
+                    targets: 3, render: function (data) {
+                        return moment(data).format('MMMM Do YYYY, h:mm:ss a');
+                    }
+                }
+            ],
+            columns: [
+                { data: 'HotelId' },
+                { data: 'Name' },
+                { data: 'DateAdded' },
+                { data: 'DateOfPromotion' },
+                { data: 'City' },
+                { data: 'Street' },
+                { data: 'Phone' }
+            ]
+        });
+    });
+</script>

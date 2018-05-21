@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels App</title>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/jquery-ui.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               @Html.ActionLink("Hotels", "Index", "Home", null, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Rules", "Rules", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        @if (Request.IsAuthenticated && User.IsInRole("Admin"))
+                        {
+                            <li>@Html.ActionLink("Admin Panel", "Index", "AdminPanel")</li>
+                        }
+                    </ul >
+                @Html.Partial("_LoginPartial")
+            </div >
+        </div >
+    </div >
+    <div >
+        @Html.Action("Search", "Search")
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    <hr />
+<footer>
+        <div class="col-lg-10 col-lg-offset-1 text-center">
+            <div class="col-lg-3">
+                @Html.ActionLink("About", "About", "Home", null, new { @style = "color:#333" })
+            </div>
+            <div class="col-lg-3">
+              @Html.ActionLink("Rules", "Rules", "Home", null, new { @style = "color:#333" })
+            </div>
+            <div class="col-lg-3">
+                @Html.ActionLink("Contact", "Contact", "Home", null, new { @style = "color:#333" })
+            </div>
+            <div class="col-lg-3">
+                @Html.ActionLink("Add hotel ", "Create", "UserPanel", null, new { @style = "color:#333" })
+            </div>
+        </div>
+</footer>
+</body>
+</html>
+<style>
+    footer {
+        background-color: #eee;
+        height: 150px;
+        display: flex;
+        align-items: center
+    }
+</style>

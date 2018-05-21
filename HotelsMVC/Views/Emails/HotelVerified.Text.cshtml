@@ -1,0 +1,4 @@
+﻿@model HotelsMVC.ViewModels.HotelVerifiedEmail
+Content-Type: text/plain; charset=utf-8
+
+Your hotel @Model.HotelName has been verified.<a href="@Url.Action("Seach", "Search", new { id = Model.HotelId })">Click here</a>

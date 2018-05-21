@@ -1,0 +1,29 @@
+﻿
+<div class="well">
+    @using (Ajax.BeginForm("Index", "Search", new AjaxOptions
+    {
+        HttpMethod = "Get",
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "hotelList"
+    }))
+    {
+        <div class="row">
+            @Html.Hidden("city")
+            <div class="col-lg-3">
+                @Html.DropDownList("hotelTypes", null, "Type", htmlAttributes: new { @class = "form-control" })
+            </div>
+            <div class="col-lg-3">
+                @Html.DropDownList("localization", null, "Localization", htmlAttributes: new { @class = "form-control" })
+            </div>
+            <div class="col-lg-2">
+                @Html.TextBox("priceFrom", null, new { @class = "form-control", @placeholder = "From [zł] ", @type = "number" })
+            </div>
+            <div class="col-lg-2">
+                @Html.TextBox("priceTo", null, new { @class = "form-control", @placeholder = "To [zł]", @type = "number" })
+            </div>
+            <div class="col-lg-2 text-center">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </div>
+    }
+</div>

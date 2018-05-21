@@ -1,0 +1,89 @@
+﻿@model IEnumerable<HotelsMVC.Models.Hotel>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="row">
+    <div class="col-md-3">
+        @Html.Partial("_Map")
+    </div>
+    <div class="col-md-9">
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">By the sea</a></li>
+            <li><a data-toggle="tab" href="#menu1">By the lake</a></li>
+            <li><a data-toggle="tab" href="#menu2">In the mountains</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                @Html.Partial("PromotedHotels", Model.Where(x => x.Region.Name == "By the sea"))
+            </div>
+            <div id="menu1" class="tab-pane fade">
+                @Html.Partial("PromotedHotels", Model.Where(x => x.Region.Name == "By the lake"))
+            </div>
+            <div id="menu2" class="tab-pane fade">
+                @Html.Partial("PromotedHotels", Model.Where(x => x.Region.Name == "In the mountains"))
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="padding-top:40px;">
+    <div class="col-lg-3 voivodeship-div">
+        <a href="@Url.Action("Index", "Search", new { localization = "Lesser Poland"})">
+            <img class="voivodeship-img" src="~/Photos/LesserPoland.jpg" style="width:100%; height:150px">
+        </a>
+        <div class="voivodeship-caption">
+            Lesser Poland
+        </div>
+    </div>
+    <div class="col-lg-3 voivodeship-div">
+        <a href="@Url.Action("Index", "Search", new { localization = "Warmian-Masurian"})">
+            <img class="voivodeship-img" src="~/Photos/Warmian-Masurian.jpg" style="width:100%; height:150px">
+        </a>
+        <div class="voivodeship-caption">
+            Warmian-Masurian
+        </div>
+    </div>
+    <div class="col-lg-3 voivodeship-div">
+        <a href="@Url.Action("Index", "Search", new { localization = "Pomeranian"})">
+            <img class="voivodeship-img" src="~/Photos/Pomeranian.jpg" style="width:100%; height:150px">
+        </a>
+        <div class="voivodeship-caption">
+            Pomeranian
+        </div>
+    </div>
+    <div class="col-lg-3 voivodeship-div">
+        <a href="@Url.Action("Index", "Search", new { localization = "Subcarpathian"})">
+            <img class="voivodeship-img" src="~/Photos/Subcarpathian.jpg" style="width:100%; height:150px">
+        </a>
+        <div class="voivodeship-caption">
+            Subcarpathian
+        </div>
+    </div>
+</div>
+
+<style>
+    .nav-tabs > li > a {
+        color: #555
+    }
+
+    .voivodeship-caption {
+        position: absolute;
+        top: 75%;
+        left: 10%;
+        color: white;
+        font-size: 20px;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
+    }
+
+    .voivodeship-div {
+        position: relative;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .voivodeship-img:hover {
+        opacity: 0.9;
+    }
+</style>

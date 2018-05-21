@@ -44,10 +44,75 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMaps.LocationServices, Version=0.1.6329.16944, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GoogleMaps.LocationServices.1.2.0.1\lib\net40\GoogleMaps.LocationServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Hangfire.Core, Version=1.6.19.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hangfire.Core.1.6.19\lib\net45\Hangfire.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Hangfire.Dashboard.Authorization, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hangfire.Dashboard.Authorization.2.1.0\lib\net45\Hangfire.Dashboard.Authorization.dll</HintPath>
+    </Reference>
+    <Reference Include="Hangfire.SqlServer, Version=1.6.19.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hangfire.SqlServer.1.6.19\lib\net45\Hangfire.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Postal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=45719375b8b4d528, processorArchitecture=MSIL">
+      <HintPath>..\packages\Postal.Mvc5.1.2.0\lib\net45\Postal.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorEngine, Version=3.4.1.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
+      <HintPath>..\packages\RazorEngine.3.4.1\lib\net45\RazorEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -89,19 +154,256 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\dataTables.bootstrap.min.css" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="GoogleMaps.LocationServices.readme.txt" />
+    <Content Include="Content\bootstrap-datetimepicker.min.css" />
+    <Content Include="Photos\header-photo1.jpeg" />
+    <Content Include="Photos\header-photo2.jpeg" />
+    <Content Include="Photos\header-photo3.jpeg" />
+    <Content Include="Photos\LesserPoland.jpg" />
+    <Content Include="Photos\map.jpeg" />
+    <Content Include="Photos\photo1.jpeg" />
+    <Content Include="Photos\photo2.jpeg" />
+    <Content Include="Photos\photo3.jpeg" />
+    <Content Include="Photos\photo4.jpeg" />
+    <Content Include="Photos\photo5.jpeg" />
+    <Content Include="Photos\photo6.jpeg" />
+    <Content Include="Photos\Pomeranian.jpg" />
+    <Content Include="Photos\Subcarpathian.jpg" />
+    <Content Include="Photos\Warmian-Masurian.jpg" />
+    <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
+    <Content Include="Infrastructure\Unite-Gallery\css\unite-gallery.css" />
+    <Content Include="Infrastructure\Unite-Gallery\images\button-close.png" />
+    <Content Include="Infrastructure\Unite-Gallery\images\cover-grid.png" />
+    <Content Include="Infrastructure\Unite-Gallery\images\icon-link32.png" />
+    <Content Include="Infrastructure\Unite-Gallery\images\icon-play32.png" />
+    <Content Include="Infrastructure\Unite-Gallery\images\icon-zoom32.png" />
+    <Content Include="Infrastructure\Unite-Gallery\images\lightbox-arrow-left.png" />
+    <Content Include="Infrastructure\Unite-Gallery\images\lightbox-arrow-right.png" />
+    <Content Include="Infrastructure\Unite-Gallery\images\lightbox-icon-close-compact.png" />
+    <Content Include="Infrastructure\Unite-Gallery\images\lightbox-icon-close-compact2.png" />
+    <Content Include="Infrastructure\Unite-Gallery\images\lightbox-icon-close.png" />
+    <Content Include="Infrastructure\Unite-Gallery\images\loader-black1.gif" />
+    <Content Include="Infrastructure\Unite-Gallery\images\loader-black2.gif" />
+    <Content Include="Infrastructure\Unite-Gallery\images\loader-black3.gif" />
+    <Content Include="Infrastructure\Unite-Gallery\images\loader-black4.gif" />
+    <Content Include="Infrastructure\Unite-Gallery\images\loader-black5.gif" />
+    <Content Include="Infrastructure\Unite-Gallery\images\loader-black6.gif" />
+    <Content Include="Infrastructure\Unite-Gallery\images\loader-black7.gif" />
+    <Content Include="Infrastructure\Unite-Gallery\images\loader-white1.gif" />
+    <Content Include="Infrastructure\Unite-Gallery\images\loader-white2.gif" />
+    <Content Include="Infrastructure\Unite-Gallery\images\loader-white3.gif" />
+    <Content Include="Infrastructure\Unite-Gallery\images\loader-white4.gif" />
+    <Content Include="Infrastructure\Unite-Gallery\images\loader-white5.gif" />
+    <Content Include="Infrastructure\Unite-Gallery\images\loader-white6.gif" />
+    <Content Include="Infrastructure\Unite-Gallery\images\loader-white7.gif" />
+    <Content Include="Infrastructure\Unite-Gallery\images\loader.gif" />
+    <Content Include="Infrastructure\Unite-Gallery\images\loader_bright.gif" />
+    <Content Include="Infrastructure\Unite-Gallery\images\loader_skype_trans.gif" />
+    <Content Include="Infrastructure\Unite-Gallery\images\not_loaded.png" />
+    <Content Include="Infrastructure\Unite-Gallery\images\play-button-round.png" />
+    <Content Include="Infrastructure\Unite-Gallery\images\play-button-square.png" />
+    <Content Include="Infrastructure\Unite-Gallery\images\transparent.png" />
+    <Content Include="Infrastructure\Unite-Gallery\js\jquery-11.0.min.js" />
+    <Content Include="Infrastructure\Unite-Gallery\js\unitegallery.js" />
+    <Content Include="Infrastructure\Unite-Gallery\js\unitegallery.min.js" />
+    <Content Include="Infrastructure\Unite-Gallery\photos\1.jpg" />
+    <Content Include="Infrastructure\Unite-Gallery\photos\2.jpg" />
+    <Content Include="Infrastructure\Unite-Gallery\photos\3.jpg" />
+    <Content Include="Infrastructure\Unite-Gallery\photos\4.jpg" />
+    <Content Include="Infrastructure\Unite-Gallery\photos\5.jpg" />
+    <Content Include="Infrastructure\Unite-Gallery\photos\6.jpg" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\alexis\alexis.css" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\alexis\images\arrows_strip_left.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\alexis\images\arrows_strip_right.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\alexis\images\button_fullscreen.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\alexis\images\button_playpause.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\alexis\images\button_zoom_back.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\alexis\images\button_zoom_minus.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\alexis\images\button_zoom_plus.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\alexis\images\grid_arrow_down.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\alexis\images\grid_arrow_left.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\alexis\images\grid_arrow_left_hortype.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\alexis\images\grid_arrow_right.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\alexis\images\grid_arrow_right_hortype.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\alexis\images\grid_arrow_up.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\alexis\images\grid_handle_down.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\alexis\images\grid_handle_left.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\alexis\images\grid_handle_right.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\alexis\images\grid_handle_up.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\alexis\images\slider_arrow_left.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\alexis\images\slider_arrow_right.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\alexis\images\slider_bullets.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\arrows_strip_down.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\arrows_strip_left.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\arrows_strip_right.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\arrows_strip_up.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\arrow_grid_down.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\arrow_grid_up.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\button_fullscreen.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\button_playpause.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\grid_arrow_left.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\grid_arrow_right.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\grid_handle_black_bottom.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\grid_handle_black_left.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\grid_handle_black_right.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\grid_handle_black_top.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\icon_zoom_back.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\icon_zoom_minus.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\icon_zoom_plus.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\slider_arrow_left.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\slider_arrow_right.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\slider_bullets.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\tile_bullets_blue.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\tile_bullets_brown.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\tile_bullets_gray.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\tile_bullets_green.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\tile_bullets_red.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\tile_button_left.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\tile_button_play_pause.png" />
+    <Content Include="Infrastructure\Unite-Gallery\skins\default\tile_button_right.png" />
+    <Content Include="Infrastructure\Unite-Gallery\themes\carousel\ug-theme-carousel.js" />
+    <Content Include="Infrastructure\Unite-Gallery\themes\compact\ug-theme-compact.js" />
+    <Content Include="Infrastructure\Unite-Gallery\themes\default\images\arrows_strip_left.png" />
+    <Content Include="Infrastructure\Unite-Gallery\themes\default\images\arrows_strip_right.png" />
+    <Content Include="Infrastructure\Unite-Gallery\themes\default\images\arrow_down_up.png" />
+    <Content Include="Infrastructure\Unite-Gallery\themes\default\images\button_fullscreen.png" />
+    <Content Include="Infrastructure\Unite-Gallery\themes\default\images\button_fullscreen_single.png" />
+    <Content Include="Infrastructure\Unite-Gallery\themes\default\images\button_playpause.png" />
+    <Content Include="Infrastructure\Unite-Gallery\themes\default\images\button_playpause_single.png" />
+    <Content Include="Infrastructure\Unite-Gallery\themes\default\ug-theme-default.css" />
+    <Content Include="Infrastructure\Unite-Gallery\themes\default\ug-theme-default.js" />
+    <Content Include="Infrastructure\Unite-Gallery\themes\grid\ug-theme-grid.js" />
+    <Content Include="Infrastructure\Unite-Gallery\themes\slider\ug-theme-slider.js" />
+    <Content Include="Infrastructure\Unite-Gallery\themes\tilesgrid\ug-theme-tilesgrid.js" />
+    <Content Include="Infrastructure\Unite-Gallery\themes\tiles\ug-theme-tiles.js" />
+    <Content Include="Infrastructure\Unite-Gallery\themes\video\images\arrow_left.png" />
+    <Content Include="Infrastructure\Unite-Gallery\themes\video\images\arrow_right.png" />
+    <Content Include="Infrastructure\Unite-Gallery\themes\video\skin-bottom-text.css" />
+    <Content Include="Infrastructure\Unite-Gallery\themes\video\skin-right-no-thumb.css" />
+    <Content Include="Infrastructure\Unite-Gallery\themes\video\skin-right-thumb.css" />
+    <Content Include="Infrastructure\Unite-Gallery\themes\video\skin-right-title-only.css" />
+    <Content Include="Infrastructure\Unite-Gallery\themes\video\ug-theme-video.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\dataTables.bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.dataTables.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Rules.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminPanelController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MapController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
+    <Compile Include="Controllers\UserPanelController.cs" />
+    <Compile Include="DAL\HotelsContext.cs" />
+    <Compile Include="DAL\Initializer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\Hangfire\Emails.cs" />
+    <Compile Include="Infrastructure\Hangfire\MyAuthorizationFilter.cs" />
+    <Compile Include="Infrastructure\Validators\FilesValidator.cs" />
+    <Compile Include="Infrastructure\Validators\FileValidator.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\HotelType.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Photo.cs" />
+    <Compile Include="Models\Hotel.cs" />
+    <Compile Include="Models\Voivodeship.cs" />
+    <Compile Include="Models\Region.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\AccountViewModels.cs" />
+    <Compile Include="ViewModels\HotelAddedEmail.cs" />
+    <Compile Include="ViewModels\HotelDeletedEmail.cs" />
+    <Compile Include="ViewModels\HotelHiddenEmail.cs" />
+    <Compile Include="ViewModels\HotelPromotedEmail.cs" />
+    <Compile Include="ViewModels\HotelVerifiedEmail.cs" />
+    <Compile Include="ViewModels\HotelViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Views\Home\PromotedHotels.cshtml" />
+    <Content Include="Views\Shared\Search.cshtml" />
+    <Content Include="Views\Search\Index.cshtml" />
+    <Content Include="Views\Search\HotelList.cshtml" />
+    <Content Include="Views\Search\SearchOptions.cshtml" />
+    <Content Include="Views\Search\Details.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\UserPanel\Create.cshtml" />
+    <Content Include="Views\UserPanel\Index.cshtml" />
+    <Content Include="Views\AdminPanel\Details.cshtml" />
+    <Content Include="Views\AdminPanel\Index.cshtml" />
+    <Content Include="Views\Emails\_ViewStart.cshtml" />
+    <Content Include="Views\Emails\Web.config" />
+    <Content Include="Views\Emails\HotelAdded.cshtml" />
+    <Content Include="Views\Emails\HotelAdded.Text.cshtml" />
+    <Content Include="Views\Emails\HotelVerified.cshtml" />
+    <Content Include="Views\Emails\HotelVerified.Text.cshtml" />
+    <Content Include="Views\Emails\HotelVerified.Html.cshtml" />
+    <Content Include="Views\Emails\HotelHidden.cshtml" />
+    <Content Include="Views\Emails\HotelHidden.Text.cshtml" />
+    <Content Include="Views\Emails\HotelHidden.Html.cshtml" />
+    <Content Include="Views\Emails\HotelDeleted.cshtml" />
+    <Content Include="Views\Emails\HotelDeleted.Text.cshtml" />
+    <Content Include="Views\Emails\HotelDeleted.Html.cshtml" />
+    <Content Include="Views\Emails\HotelPromoted.cshtml" />
+    <Content Include="Views\Emails\HotelPromoted.Text.cshtml" />
+    <Content Include="Views\Emails\HotelPromoted.Html.cshtml" />
+    <Content Include="Views\Emails\HotelAdded.Html.cshtml" />
+    <Content Include="Views\Shared\_Map.cshtml" />
+    <Content Include="Views\Map\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -111,8 +413,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

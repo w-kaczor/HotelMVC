@@ -1,0 +1,26 @@
+﻿@model IEnumerable<HotelsMVC.Models.Hotel>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-4">
+            <div class="thumbnail">
+                <div class="hotel-image">
+                    <a href="@Url.Action("Details", "Search", new { id = item.HotelId})">
+                        <img src="~/Photos/@item.ThumbnailPath" style="width:100%; height:150px">
+                    </a>
+                </div>
+                <div class="caption text-center">
+                    <div class="promoted-info">
+                        <div>@Html.DisplayFor(modelItem => item.Name) - @Html.DisplayFor(modelItem => item.Address.City)</div>
+                        <div>@Html.DisplayFor(modelItem => item.PricePerDayFrom) - @Html.DisplayFor(modelItem => item.PricePerDayTo) zł</div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+
+
